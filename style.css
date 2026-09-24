@@ -1,0 +1,37 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #17212b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.tg-container { width: 100%; max-width: 360px; text-align: center; }
+.tg-logo { margin-bottom: 24px; }
+h1 { font-size: 22px; font-weight: 500; margin-bottom: 8px; }
+.sub { font-size: 14px; color: #7f91a4; margin-bottom: 32px; line-height: 1.5; }
+.step { display: none; }
+.step.active { display: block; }
+.input-group { display: flex; gap: 8px; margin-bottom: 20px; }
+.input-group select {
+  background: #242f3d; color: #fff; border: none; border-radius: 8px;
+  padding: 14px 10px; font-size: 15px; outline: none; cursor: pointer; flex-shrink: 0;
+}
+.input-group input {
+  width: 100%; background: #242f3d; color: #fff; border: none;
+  border-radius: 8px; padding: 14px 16px; font-size: 15px; outline: none;
+}
+.input-group input::placeholder { color: #6c7883; }
+.input-group input:focus { box-shadow: 0 0 0 2px #2AABEE; }
+.code-group input { text-align: center; font-size: 24px; letter-spacing: 8px; padding: 16px; }
+.btn-primary {
+  width: 100%; background: #2AABEE; color: #fff; border: none; border-radius: 8px;
+  padding: 14px; font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.2s;
+}
+.btn-primary:hover { background: #229ED9; }
+.btn-primary:active { transform: scale(0.98); }
+.resend { font-size: 13px; color: #7f91a4; margin-top: 20px; }
+.resend a { color: #2AABEE; text-decoration: none; }
